@@ -71,21 +71,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-        function submitForm(){
+        function submitForm() {
             this.$axios({
-                method:"post",
-                url:"http://eugeneliu.top/search/room",
-                headers:{'Content-Type':'application/json'},
-                data:{
-                    document.getElementById("projectId").options[document.getElementById("projectId").selectedIndex].value;
-                    document.getElementById("status").options[document.getElementById("status").selectedIndex].value:
-            document.getElementById("type").options[document.getElementById("type").selectedIndex].value;
-                    document.getElementById("bed").options[document.getElementById("bed").selectedIndex].value;
-                    document.getElementById("bathroom").options[document.getElementById("bathroom").selectedIndex].value;
-                    document.getElementById("minPrice").options[document.getElementById("minPrice").selectedIndex].value;
-                    document.getElementById("maxPrice").options[document.getElementById("maxPrice").selectedIndex].value;
-                }
-            }).then((res)=>{
+                method: "post",
+                url: "http://eugeneliu.top/search/room",
+                headers: {'Content-Type': 'application/json'},
+                data: {
+            continent: document.getElementById("projectType").options[document.getElementById("projectType").selectedIndex].value;
+            country:document.getElementById("projectId").options[document.getElementById("projectId").selectedIndex].value;
+            status:document.getElementById("status").options[document.getElementById("status").selectedIndex].value:
+            type:document.getElementById("type").options[document.getElementById("type").selectedIndex].value;
+            bed:document.getElementById("bed").options[document.getElementById("bed").selectedIndex].value;
+            bathroom:document.getElementById("bathroom").options[document.getElementById("bathroom").selectedIndex].value;
+            minPrice:document.getElementById("minPrice").options[document.getElementById("minPrice").selectedIndex].value;
+            maxPrice:document.getElementById("maxPrice").options[document.getElementById("maxPrice").selectedIndex].value;
+        }
+        }).
+            then((res) = > {
                 console.log(res.data);
         })
         }
@@ -231,106 +233,104 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <h2>find your loved place</h2>
 
-            <form id="form1" method="POST" name="form1">
-                <div class="place-grids">
-                    <div class="col-md-3 place-grid">
-                        <h5>all areas</h5>
-                        <select class="sel" id="projectType" name="continent" onChange="getCountary()">
-                            <option value="0">please choose</option>
-                            <option value="Africa">Africa</option>
-                            <option value="Australia">Australia and Oceania</option>
-                            <option value="Asia">Asia</option>
-                            <option value="Europe">Europe</option>
-                            <option value="North">North America</option>
-                            <option value="South">South America</option>
-                            <option value="middleEast">middle East</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3 place-grid">
-                        <h5>all countary</h5>
-                        <select id="projectId" name="country" class="sel">
-                            <option value="0">please choose</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3 place-grid">
-                        <h5>Property Status</h5>
-                        <select class="sel" id="status" name="status">
-                            <option value="0">please choose</option>
-                            <option value="">Uncompleted</option>
-                            <option value="">Old Houses</option>
-                            <option value="">New Houses</option>
-                            <option value="">For Rent</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3 place-grid">
-                        <h5>Property Type</h5>
-                        <select class="sel" id="type" name="type">
-                            <option value="0">please choose</option>
-                            <option value="">Townhouse</option>
-                            <option value="">Villa</option>
-                            <option value="">Apartment</option>
-                        </select>
-                    </div>
-                    <div class="clearfix"></div>
+            <div class="place-grids">
+                <div class="col-md-3 place-grid">
+                    <h5>all areas</h5>
+                    <select class="sel" id="projectType" name="continent" onChange="getCountary()">
+                        <option value="0">please choose</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Australia">Australia and Oceania</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="North">North America</option>
+                        <option value="South">South America</option>
+                        <option value="middleEast">middle East</option>
+                    </select>
                 </div>
-                <div class="place-grids" >
-                    <div class="col-md-2 place-grid1">
-                        <h5>Min Beds</h5>
-                        <select class="sel" id="bed" name="bed">
-                            <option value="">any</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2 place-grid1">
-                        <h5>Min Baths</h5>
-                        <select class="sel" id="bathroom" name="bathroom">
-                            <option value="">any</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2 place-grid1">
-                        <h5>Min Price</h5>
-                        <select class="sel" id="minPrice" name="minPrice">
-                            <option value="">any</option>
-                            <option value="">$500</option>
-                            <option value="">$1000</option>
-                            <option value="">$2000</option>
-                            <option value="">$3000</option>
-                            <option value="">$4000</option>
-                            <option value="">$5000</option>
-                            <option value="">$75000</option>
-                            <option value="">$10000</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2 place-grid1">
-                        <h5>Max Price</h5>
-                        <select class="sel" id="maxPrice" name="maxPrice">
-                            <option value="">any</option>
-                            <option value="">$1000</option>
-                            <option value="">$2000</option>
-                            <option value="">$3000</option>
-                            <option value="">$4000</option>
-                            <option value="">$5000</option>
-                            <option value="">$75000</option>
-                            <option value="">$10000</option>
-                        </select>
-                    </div>
-
+                <div class="col-md-3 place-grid">
+                    <h5>all countary</h5>
+                    <select id="projectId" name="country" class="sel">
+                        <option value="0">please choose</option>
+                    </select>
                 </div>
-                <div class="col-md-4 search">
-                    <button  id="ser">Search</button>
+                <div class="col-md-3 place-grid">
+                    <h5>Property Status</h5>
+                    <select class="sel" id="status" name="status">
+                        <option value="0">please choose</option>
+                        <option value="">Uncompleted</option>
+                        <option value="">Old Houses</option>
+                        <option value="">New Houses</option>
+                        <option value="">For Rent</option>
+                    </select>
                 </div>
-                <div id="result"> </div>
+                <div class="col-md-3 place-grid">
+                    <h5>Property Type</h5>
+                    <select class="sel" id="type" name="type">
+                        <option value="0">please choose</option>
+                        <option value="">Townhouse</option>
+                        <option value="">Villa</option>
+                        <option value="">Apartment</option>
+                    </select>
+                </div>
                 <div class="clearfix"></div>
-            </form>
+            </div>
+            <div class="place-grids">
+                <div class="col-md-2 place-grid1">
+                    <h5>Min Beds</h5>
+                    <select class="sel" id="bed" name="bed">
+                        <option value="">any</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                    </select>
+                </div>
+                <div class="col-md-2 place-grid1">
+                    <h5>Min Baths</h5>
+                    <select class="sel" id="bathroom" name="bathroom">
+                        <option value="">any</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                    </select>
+                </div>
+                <div class="col-md-2 place-grid1">
+                    <h5>Min Price</h5>
+                    <select class="sel" id="minPrice" name="minPrice">
+                        <option value="">any</option>
+                        <option value="">$500</option>
+                        <option value="">$1000</option>
+                        <option value="">$2000</option>
+                        <option value="">$3000</option>
+                        <option value="">$4000</option>
+                        <option value="">$5000</option>
+                        <option value="">$75000</option>
+                        <option value="">$10000</option>
+                    </select>
+                </div>
+                <div class="col-md-2 place-grid1">
+                    <h5>Max Price</h5>
+                    <select class="sel" id="maxPrice" name="maxPrice">
+                        <option value="">any</option>
+                        <option value="">$1000</option>
+                        <option value="">$2000</option>
+                        <option value="">$3000</option>
+                        <option value="">$4000</option>
+                        <option value="">$5000</option>
+                        <option value="">$75000</option>
+                        <option value="">$10000</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="col-md-4 search">
+                <button id="ser" onclick="submitForm()">Search</button>
+            </div>
+            <div id="result"></div>
+            <div class="clearfix"></div>
 
         </div>
     </div>
