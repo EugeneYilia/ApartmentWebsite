@@ -1,0 +1,200 @@
+﻿
+Asia
+China
+New Houses
+60 Merrick Way, Miami
+Apartment
+2
+4
+2500
+http://eugeneliu.top/web/img/1.jpg
+
+Africa
+Ghana
+Old Houses
+Florida 5, Pinecrest, FL
+Apartment
+3
+2
+4500
+http://eugeneliu.top/web/img/4.jpg
+
+Asia
+Thailand
+Uncompleted
+109 Bollywood Boulevard
+Town Houses
+5
+3
+9500
+http://eugeneliu.top/web/img/2.jpg
+
+Asia
+South Korea
+For rent
+Florida 5, Pinecrest, FL
+Villa
+4
+5
+5500
+http://eugeneliu.top/web/img/1.jpg
+
+Asia
+Japan
+Old Houses
+Florida 5, Pinecrest, FL
+Town House
+5
+3
+7500
+http://eugeneliu.top/web/img/3.jpg
+
+Africa
+South Africa
+Uncompleted
+109 Bollywood Boulevard
+Villa
+5
+4
+350
+http://eugeneliu.top/web/img/2.jpg
+
+Africa
+Ethiopia
+New Houses
+Florida 5, Pinecrest, FL
+Villa
+4
+3
+5500
+http://eugeneliu.top/web/img/3.jpg
+
+Australia and Oceania
+Australia
+Old Houses
+109 Bollywood Boulevard
+Apartment
+3
+3
+3500
+http://eugeneliu.top/web/img/2.jpg
+
+Australia and Oceania
+papua new guinea
+New Houses
+109 Bollywood Boulevard
+Town House
+4
+5
+6500
+http://eugeneliu.top/web/img/5.jpg
+
+Europe
+Britain
+Uncompleted
+Florida 5, Pinecrest, FL
+Town House
+2
+4
+6500
+http://eugeneliu.top/web/img/4.jpg
+
+Europe
+Germany
+Old Houses
+Florida 5, Pinecrest, FL
+Villa
+4
+3
+5500
+http://eugeneliu.top/web/img/3.jpg
+
+Europe
+France
+For rent
+Florida 5, Pinecrest, FL
+Town House
+3
+4
+4500
+http://eugeneliu.top/web/img/3.jpg
+
+Europe
+Finland
+For rent
+Florida 5, Pinecrest, FL
+Apartment
+3
+3
+6200
+http://eugeneliu.top/web/img/3.jpg
+
+North America
+America
+Uncompleted
+Florida 5, Pinecrest, FL
+Town House
+4
+3
+4700
+http://eugeneliu.top/web/img/4.jpg
+
+North America
+Canada
+For rent 
+Florida 5, Pinecrest, FL
+Villa
+5
+3
+6700
+http://eugeneliu.top/web/img/5.jpg
+
+North America
+Jamaica
+Old Houses
+Florida 5, Pinecrest, FL
+Apartment
+4
+3
+7200
+http://eugeneliu.top/web/img/4.jpg
+
+South America
+Brazil
+For rent
+Florida 5, Pinecrest, FL
+Town House
+4
+3
+6600
+http://eugeneliu.top/web/img/5.jpg
+
+South America
+Venezuela
+Uncompleted
+Florida 5, Pinecrest, FL
+Town House
+4
+3
+8500
+http://eugeneliu.top/web/img/4.jpg
+
+Middle East
+Dubai
+New Houses
+Florida 5, Pinecrest, FL
+Villa
+3
+2
+6500
+http://eugeneliu.top/web/img/5.jpg
+
+Middle East
+Qatar
+Old Houses
+Florida 5, Pinecrest, FL
+Apartment
+5
+5
+6500
+http://eugeneliu.top/web/img/5.jpg

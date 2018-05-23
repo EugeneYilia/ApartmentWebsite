@@ -1,0 +1,27 @@
+area Asia 
+country China  
+status Old House 
+location
+type Apartment
+bed 2
+bathroom 3
+price 3400
+img
+
+create table room(
+continent varchar(50),
+country varchar(50),
+status varchar(50),
+location varchar(50),
+type varchar(50),
+bed int(10),
+bathroom int(10),
+price int(10),
+imageURL varchar(100),
+primary key(continent,country,status,location,type,bed,bathroom,price,imageURL))default charset=utf8;
+
+create table user(
+email varchar(50),
+password varchar(50)
+)default charset=utf8;
+

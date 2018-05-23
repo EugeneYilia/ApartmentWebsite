@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.EugeneStudio.apartmentWebsite.mapper.RoomMapper">
+    <resultMap id="BaseResultMap" type="com.EugeneStudio.apartmentWebsite.model.RoomKey">
+        <id column="continent" property="continent" jdbcType="VARCHAR"/>
+        <id column="country" property="country" jdbcType="VARCHAR"/>
+        <id column="status" property="status" jdbcType="VARCHAR"/>
+        <id column="location" property="location" jdbcType="VARCHAR"/>
+        <id column="type" property="type" jdbcType="VARCHAR"/>
+        <id column="bed" property="bed" jdbcType="INTEGER"/>
+        <id column="bathroom" property="bathroom" jdbcType="INTEGER"/>
+        <id column="price" property="price" jdbcType="INTEGER"/>
+        <id column="imageURL" property="imageurl" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    `continent`,`country`,`status`,`location`,`type`,`bed`,`bathroom`,`price`,`imageURL`
+    </sql>
+    <select id="selectRooms" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM `room`
+        where `continent` = #{continent}
+        and `country` = #{country}
+        and `status` = #{status}
+        and `type` = #{type}
+        and `bed` >= #{bed}
+        and `bathroom` >= #{bathroom}
+        and `price` >= #{minPrice}
+        and #{maxPrice} >= `price`
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="com.EugeneStudio.apartmentWebsite.model.RoomKey">
+    delete from room
+    where continent = #{continent,jdbcType=VARCHAR}
+      and country = #{country,jdbcType=VARCHAR}
+      and status = #{status,jdbcType=VARCHAR}
+      and location = #{location,jdbcType=VARCHAR}
+      and type = #{type,jdbcType=VARCHAR}
+      and bed = #{bed,jdbcType=INTEGER}
+      and bathroom = #{bathroom,jdbcType=INTEGER}
+      and price = #{price,jdbcType=INTEGER}
+      and imageURL = #{imageurl,jdbcType=VARCHAR}
+  </delete>
+    <insert id="insert" parameterType="com.EugeneStudio.apartmentWebsite.model.RoomKey">
+    insert into room (continent, country, status, 
+      location, type, bed, 
+      bathroom, price, imageURL
+      )
+    values (#{continent,jdbcType=VARCHAR}, #{country,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
+      #{location,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{bed,jdbcType=INTEGER}, 
+      #{bathroom,jdbcType=INTEGER}, #{price,jdbcType=INTEGER}, #{imageurl,jdbcType=VARCHAR}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.EugeneStudio.apartmentWebsite.model.RoomKey">
+        insert into room
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="continent != null">
+                continent,
+            </if>
+            <if test="country != null">
+                country,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="location != null">
+                location,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="bed != null">
+                bed,
+            </if>
+            <if test="bathroom != null">
+                bathroom,
+            </if>
+            <if test="price != null">
+                price,
+            </if>
+            <if test="imageurl != null">
+                imageURL,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="continent != null">
+                #{continent,jdbcType=VARCHAR},
+            </if>
+            <if test="country != null">
+                #{country,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="location != null">
+                #{location,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="bed != null">
+                #{bed,jdbcType=INTEGER},
+            </if>
+            <if test="bathroom != null">
+                #{bathroom,jdbcType=INTEGER},
+            </if>
+            <if test="price != null">
+                #{price,jdbcType=INTEGER},
+            </if>
+            <if test="imageurl != null">
+                #{imageurl,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+</mapper>
