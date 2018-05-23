@@ -46,7 +46,7 @@ spring:
         #2.慢sql时间设置,即执行时间大于5000毫秒的都是慢sql,将被记录下来
         connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
     resources:
-        static-locations:classpath: /static/
+        static-locations: classpath:/static/
 mybatis:
   #映射文件所在的位置   mapper文件夹下的所有xml文件
   mapper-locations: classpath:mapping/*.xml
