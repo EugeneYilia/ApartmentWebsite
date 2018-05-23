@@ -1,4 +1,4 @@
-area Asia 
+continent Asia 
 country China  
 status Old House 
 location
@@ -22,6 +22,7 @@ primary key(continent,country,status,location,type,bed,bathroom,price,imageURL))
 
 create table user(
 email varchar(50),
-password varchar(50)
+password varchar(50),
+primary key(email)
 )default charset=utf8;
 
