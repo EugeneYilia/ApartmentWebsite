@@ -72,7 +72,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
         function submitForm(){
-
+            this.$axios({
+                method:"post",
+                url:"http://eugeneliu.top/search/room",
+                headers:{'Content-Type':'application/json'},
+                data:{
+                    document.getElementById("projectId").options[document.getElementById("projectId").selectedIndex].value;
+                    document.getElementById("status").options[document.getElementById("status").selectedIndex].value:
+            document.getElementById("type").options[document.getElementById("type").selectedIndex].value;
+                    document.getElementById("bed").options[document.getElementById("bed").selectedIndex].value;
+                    document.getElementById("bathroom").options[document.getElementById("bathroom").selectedIndex].value;
+                    document.getElementById("minPrice").options[document.getElementById("minPrice").selectedIndex].value;
+                    document.getElementById("maxPrice").options[document.getElementById("maxPrice").selectedIndex].value;
+                }
+            }).then((res)=>{
+                console.log(res.data);
+        })
         }
     </script>
 </head>
@@ -239,7 +254,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="col-md-3 place-grid">
                         <h5>Property Status</h5>
-                        <select class="sel" name="status">
+                        <select class="sel" id="status" name="status">
                             <option value="0">please choose</option>
                             <option value="">Uncompleted</option>
                             <option value="">Old Houses</option>
@@ -249,7 +264,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="col-md-3 place-grid">
                         <h5>Property Type</h5>
-                        <select class="sel" name="type">
+                        <select class="sel" id="type" name="type">
                             <option value="0">please choose</option>
                             <option value="">Townhouse</option>
                             <option value="">Villa</option>
@@ -261,7 +276,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="place-grids" >
                     <div class="col-md-2 place-grid1">
                         <h5>Min Beds</h5>
-                        <select class="sel" name="bed">
+                        <select class="sel" id="bed" name="bed">
                             <option value="">any</option>
                             <option value="">1</option>
                             <option value="">2</option>
@@ -272,7 +287,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="col-md-2 place-grid1">
                         <h5>Min Baths</h5>
-                        <select class="sel" name="bathroom">
+                        <select class="sel" id="bathroom" name="bathroom">
                             <option value="">any</option>
                             <option value="">1</option>
                             <option value="">2</option>
@@ -283,7 +298,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="col-md-2 place-grid1">
                         <h5>Min Price</h5>
-                        <select class="sel" name="minPrice">
+                        <select class="sel" id="minPrice" name="minPrice">
                             <option value="">any</option>
                             <option value="">$500</option>
                             <option value="">$1000</option>
@@ -297,7 +312,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="col-md-2 place-grid1">
                         <h5>Max Price</h5>
-                        <select class="sel" name="maxPrice">
+                        <select class="sel" id="maxPrice" name="maxPrice">
                             <option value="">any</option>
                             <option value="">$1000</option>
                             <option value="">$2000</option>
