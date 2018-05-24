@@ -96,6 +96,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 //console.log(response.statusText);
                 //console.log(response.headers);
                 //console.log(response.config);
+                
+                //show on page start
+                var data=eval('('+response+')');
+                var tab=$("#result");
+                var html=[];
+                if(data.length>0){
+                    for(var i=0;i<data.length;i++){
+                    	if(i%2 == 0){
+                          trBgColor = "#FFFFFF";
+                       }else{
+                           trBgColor = '#F5FAFA';
+                         }
+
+                    	var plan = data[i];
+                   html.push("<tr align='center' valign='middle' bordercolor='#0000FF' bgcolor='"+ trBgColor +"' id='childPlan'"+ plan.bathroom +">");
+            
+                    html.push("<td>"+ plan.bed +"</td>");
+                    html.push("<td>"+ plan.continent +"</td>");
+                    html.push("<td>"+ plan.country +"</td>");
+                    html.push("<td>"+ plan.type +"</td>");
+                    html.push("<td>"+ plan.status +"</td>");
+                    html.push("<td>"+ plan.status +"</td>");
+                    html.push("</tr>");
+                    }
+                   tab.html("");
+                   tab.append(html.join(""));
+                }
+                //show on page end
+                
             }).catch(function (error) {
                 console.log(error);
             });
@@ -331,7 +360,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
 
                 </div>
-                <div id="result"></div>
+               
                 <div class="clearfix"></div>
             </form>
             <div class="col-md-4 search">
@@ -339,6 +368,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
     </div>
+    
+     <div id="result">
+                
+     </div>
+    
     <div class="friend-agent">
         <div class="container">
             <div class="friend-grids">
