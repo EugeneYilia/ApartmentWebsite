@@ -96,6 +96,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 //console.log(response.statusText);
                 //console.log(response.headers);
                 //console.log(response.config);
+
+                //show on page start
+                for (var i = 0; i < response.data.length; i++) {
+                    document.getElementById('apartmentContainer').innerHTML += "<div>bathroom:"+(response.data)[i].bathroom+"</div>";
+                    document.getElementById('apartmentContainer').innerHTML += "<div>bed:"+(response.data)[i].bed+"</div>";
+                    document.getElementById('apartmentContainer').innerHTML += "<div>continent:"+(response.data)[i].continent+"</div>";
+                    document.getElementById('apartmentContainer').innerHTML += "<div>country:"+(response.data)[i].country+"</div>";
+                    document.getElementById('apartmentContainer').innerHTML += "<div>location:"+(response.data)[i].location+"</div>";
+                    document.getElementById('apartmentContainer').innerHTML += "<div>price:"+(response.data)[i].price+"</div>";
+                    document.getElementById('apartmentContainer').innerHTML += "<div>status:"+(response.data)[i].status+"</div>";
+                    document.getElementById('apartmentContainer').innerHTML += "<div>type:"+(response.data)[i].type+"</div>";
+                    //document.getElementById('apartmentContainer').innerHTML += "<img src="+(response.data)[i].imageurl+"></img>";
+                    document.getElementById('apartmentContainer').innerHTML += "<img src="+"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2492619745,1086876022&fm=27&gp=0.jpg"+"></img>";
+                    //https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2492619745,1086876022&fm=27&gp=0.jpg
+                }
+                //document.getElementById('apartmentContainer').innerHTML += response.data.length + "  ";
+                //document.getElementById('apartmentContainer').innerHTML += (response.data)[0].bathroom;
+                //show on page end
+
             }).catch(function (error) {
                 console.log(error);
             });
@@ -339,6 +358,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
     </div>
+
+    <div id="apartmentContainer">
+
+    </div>
+
     <div class="friend-agent">
         <div class="container">
             <div class="friend-grids">
