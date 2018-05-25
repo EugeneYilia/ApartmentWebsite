@@ -30,8 +30,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--fonts-->
     <script src="js/responsiveslides.min.js"></script>
     <script>
-
-
         $(function () {
             $("#slider").responsiveSlides({
                 auto: true,
@@ -46,20 +44,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="js/owl.carousel.js"></script>
     <script>
         var city = [["Ghana", "Ethiopia", "South Africa"], ["Australia", "papua new guinea"], ["China", "Thailand", "South Korea", "Japan"], ["Britain", "Germany", "France", "Finland"], ["America", "Canada", "Jamaica"], ["Brazil", "Venezuela"], ["Dubai", "Qatar"]];
-
         function getCountary() {
-
-
             var areas = document.form1.projectType;
             var countary = document.form1.projectId;
             var sltcity = city[areas.selectedIndex - 1];
             countary.length = 1;
-
             for (var i = 0; i < sltcity.length; i++) {
                 countary[i + 1] = new Option(sltcity[i], sltcity[i]);
             }
-
-
         };
         $(document).ready(function () {
             $("#owl-demo").owlCarousel({
@@ -71,7 +63,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 pagination: true,
             });
         });
-
     </script>
     <script src="js/EugeneLiu.js"></script>
     <script>
