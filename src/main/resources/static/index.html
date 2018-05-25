@@ -104,23 +104,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     document.getElementById('apartmentContainer').innerHTML += "<div>There is no suitable apartment for you.</div>"
                 }
 
+
+
+
                 //show on page start
                 for (var i = 0; i < response.data.length; i++) {
-                    document.getElementById('apartmentContainer').innerHTML += "<div>bathroom:"+(response.data)[i].bathroom+"</div>";
-                    document.getElementById('apartmentContainer').innerHTML += "<div>bed:"+(response.data)[i].bed+"</div>";
-                    document.getElementById('apartmentContainer').innerHTML += "<div>continent:"+(response.data)[i].continent+"</div>";
-                    document.getElementById('apartmentContainer').innerHTML += "<div>country:"+(response.data)[i].country+"</div>";
-                    document.getElementById('apartmentContainer').innerHTML += "<div>location:"+(response.data)[i].location+"</div>";
-                    document.getElementById('apartmentContainer').innerHTML += "<div>price:"+(response.data)[i].price+"</div>";
-                    document.getElementById('apartmentContainer').innerHTML += "<div>status:"+(response.data)[i].status+"</div>";
-                    document.getElementById('apartmentContainer').innerHTML += "<div>type:"+(response.data)[i].type+"</div>";
+                    document.getElementById('apartmentContainer').innerHTML += "<div class='operation-grids'>";
+                    document.getElementById('apartmentContainer').innerHTML += "<div class='col-md-6 operation-grid'>";
+                    document.getElementById('apartmentContainer').innerHTML += "<div class='operation-left''>"+"<img src=" + "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2492619745,1086876022&fm=27&gp=0.jpg" + "class='img-responsive'/>"+"</div>";
+                    document.getElementById('apartmentContainer').innerHTML += "<div class='operation-right'>";
+
+
+                    document.getElementById('apartmentContainer').innerHTML += "<p>bathroom:" + (response.data)[i].bathroom + "</p>";
+                    document.getElementById('apartmentContainer').innerHTML += "<p>bed:" + (response.data)[i].bed + "</p>";
+                    document.getElementById('apartmentContainer').innerHTML += "<p>continent:" + (response.data)[i].continent + "</p>";
+                    document.getElementById('apartmentContainer').innerHTML += "<p>country:" + (response.data)[i].country + "</p>";
+                    document.getElementById('apartmentContainer').innerHTML += "<p>location:" + (response.data)[i].location + "</p>";
+                    document.getElementById('apartmentContainer').innerHTML += "<p>price:" + (response.data)[i].price + "</p>";
+                    document.getElementById('apartmentContainer').innerHTML += "<p>status:" + (response.data)[i].status + "</p>";
+                    document.getElementById('apartmentContainer').innerHTML += "<p>type:" + (response.data)[i].type + "</p>";
                     //document.getElementById('apartmentContainer').innerHTML += "<img src="+(response.data)[i].imageurl+"></img>";
-                    document.getElementById('apartmentContainer').innerHTML += "<img src="+"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2492619745,1086876022&fm=27&gp=0.jpg"+"></img>";
+
                     //https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2492619745,1086876022&fm=27&gp=0.jpg
+                    document.getElementById('apartmentContainer').innerHTML += "</div>";
+                    document.getElementById('apartmentContainer').innerHTML += "</div>";
+
+                    document.getElementById('apartmentContainer').innerHTML += "</div>";
                 }
-                //document.getElementById('apartmentContainer').innerHTML += response.data.length + "  ";
-                //document.getElementById('apartmentContainer').innerHTML += (response.data)[0].bathroom;
-                //show on page end
+                    //document.getElementById('apartmentContainer').innerHTML += response.data.length + "  ";
+                    //document.getElementById('apartmentContainer').innerHTML += (response.data)[0].bathroom;
+                    //show on page end
 
             }).catch(function (error) {
                 console.log(error);
@@ -306,7 +319,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
 
                 <div class="place-grids">
-                    <div class="col-md-2 place-grid1">
+                    <div class="col-md-2 place-grid1" style="margin-left: 17%;">
                         <h5>Min Beds</h5>
                         <select class="sel" id="bed1" name="bed">
                             <option value="any">any</option>
@@ -360,15 +373,334 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 <div class="clearfix"></div>
             </form>
-            <div class="col-md-4 search" style="margin-left: 67%;">
-                <button id="ser" onclick="submitForm()" style="background:#34ABE2;width:100%;border-radius: 5px;">Search</button>
+            <div class="col-md-4 search" style="margin-left: 35%;">
+                <button id="ser" onclick="submitForm()" style="opacity:0.6; background:#8E8B8B;width:100%;border-radius: 5px;">Search</button>
             </div>
         </div>
     </div>
 
-    <div id="apartmentContainer" >
+    <div style="border-top: 2px solid #262626;">
+
+            <div class="operation-consulting">
+                <h3>Searching Result</h3>
+                <div id="apartmentContainer">
+
+                </div>
+
+            </div>
+
+        <div class="SouthAfrica" style="border-top: 2px solid #245269">
+
+            <h3 style="margin-left: 45%; font-size: 20px;font-weight: bold;">South Africa</h3>
+            <p>South Africa has millions of annual foreign visitors who purchase property once they experience our beautiful country and its people.</p>
+            <p>South Africa is reputed to have one of the best deeds registration systems worldwide, with an exceptional degree of accuracy and security of tenure being guaranteed.</p>
+            <p>This is according to Craig Hutchison, CEO Engel & Völkers Southern Africa, who says that although there has been some uncertainty about foreign investors being allowed to own property in SA, this has now been dispelled.</p>
+            <p>Foreigners can purchase and own immovable property in South Africa without restriction - non-nationals are subject to the same laws as nationals. The only ineligible people are illegal aliens who are not allowed to own immovable property in SA.</p>
+            <p>Hutchison says political and macroeconomic uncertainties have taken centre stage following President Jacob Zuma's cabinet reshuffle and the firing of the minister of finance and his deputy on the 30th of March. The subsequent downgrades by S&P Global Ratings and Fitch have further increased concerns about South Africa's economic outlook.</p>
+            <p>“Although political and economic conditions do impact on the property industry, we stand firm that property still remains your best investment, as housing is not an optional extra,” says Hutchison</p>
+            <p>“We can remain proud of our country as it has many unique aspects. The possibility is that you could potentially come across an international visitor wishing to purchase a second home, and we thus look into the process to familiarise you with the ins and outs.”</p>
+            <p>He says South Africa is reputed to have one of the best deeds registration systems worldwide, with an exceptional degree of accuracy and security of tenure being guaranteed. Property can be owned individually, jointly in undivided shares or by an entity such as a company, close corporation, trust or a similar entity registered outside South Africa</p>
+            <p>Hutchison says an international investor would need to work through a reputable and global real estate company, so that they are assured of both an ethical as well as a professional service and that their transactions are handled in an efficient and legal manner.</p>
+            <p>“We only work with transferring attorneys who are reliable and well-known, so they will be able to advise international investors of any specific local regulations that they need to be aware of,” he says.
+
+                “Our South African property sale processes are acknowledged as being structured, secure and professionally managed.”
+
+                Hutchison says a substantial percentage of the current market is being fuelled by foreign exchange.
+
+                Willing investors or expats looking to buy a permanent holding or holiday home can expect to pay on average R950 000, which adds up to about €53 000, for a small home (80sqm to 140sqm), R2 million, or €111 000, for a medium-sized home (141sqm to 220sqm), and for really extravagant and special homes of between R20 million to R50 million, this amounts to a mere €1.1 million.
+
+                Willing investors or expats looking to buy a permanent holding or holiday home can expect to pay on average R950 000, which adds up to about €53 000, for a small home (80sqm to 140sqm).
+                Investing in South Africa, according to the FNB House Price Index:
+
+                - 4.89% of SA homes are owned by foreign investors.
+
+                - The first quarter 2017 Foreign Home Buyer Confidence Index was +0.09, from -0.016.
+
+                - In euro terms, the FNB House Price Index rose by 24.3% year-on-year, in dollar terms by 19.3%, and in UK pound terms by 36.5% (the Brexit impact) year-on-year in February. Secondary home buying has risen to 14.47% by the first quarter of 2017.
+
+                - Buy-to-let homes remain the major driver of secondary home demand, accounting for 9.5% of total home buying in the first quarter.
+
+                - In the first quarter of 2017, holiday home buying comprised 3.77% of all sales.
+
+                - Buying a home for a family member or relative to live in remains at around 1%.
+
+                - In total, secondary properties make up an estimated 16.24% as at January 2017.
+            </p>
+
+            <h4 style="color: #E69432">Before buying</h4>
+            <p>Non-residents who are intending to stay in their SA property for long periods will need to comply with the Immigration Act, and may need to acquire a residence.
+
+                Within the first week of arriving in South Africa, foreigners must apply for an extension on their 90-day visa from the new visa centres as this will no longer be done through the Home Affairs offices.
+
+                Non-residents who are purchasing property in the name of a company or other legal entity rather than in their own names will first have to register that entity in SA and appoint a local public officer.
+
+                Legal capacity to enter into a sale agreement
+
+                The buying and selling of property in South Africa is governed in terms of our common law. The transferring attorney's requirements to conclude the transfer are almost the same as that of a transfer to a South African resident, except that, regardless of your foreign marriage regime, your spouse still has to sign all the documents pertaining to the purchase of the property.
+            </p>
+
+
+            <h4 style="margin-top: 5%;color: #E69432;">Making an offer</h4>
+            <p>
+                Conveyancing documents must be signed by either a notary public of the country where the person lives, or at the South African Consulate or Embassy in such country.
+            </p>
+            <h4 style="margin-top: 5%;color: #E69432">Costs to be aware of</h4>
+            <p>
+                Transfer duty (tax) is payable by the buyer on all pre-owned properties in SA valued at more than R900 000.
+                Transfer duty (tax) is payable by the buyer on all pre-owned properties in SA valued at more than R900 000. Newly-built properties acquired from developers, on the other hand, usually attract value-added tax (VAT) at 14% of value, included in the sale price.
+
+                If the buyer will be letting out the property while they are not in SA, they should be aware that they will need a non-residential South African bank account.
+
+            </p>
+            <h4 style="margin-top: 5%;color: #E69432">Banking</h4>
+            <p>Non-residents can open a local bank account to service instalments on a home loan, or to receive rental income from the property they bought.
+
+                Any deposit made into this account in SA will require the approval of the Reserve Bank, because non-residents are not allowed to generate any income in SA except for rentals and the interest on investments such as shares.
+
+                The following documentation will be required by the banks before they consider a non-resident for bond approval:
+
+                - A certified copy of their passport.
+
+                - 3 months’ overseas bank statements.
+
+                - 3 months’ payslips (6 months statements and payslips where the purchaser earns commission or is paid overtime).
+
+                You can open a special ‘non-resident’ bank account with a South African Financial Institution and ensure that all funds expended for purposes of the property investment go through this account.
+
+                Once the financing details have been finalised, the transfer attorney can go ahead with getting the property registered in the new owner's name.
+            </p>
+            <h4 style="color: #E69432">Financing</h4>
+            <p>South African exchange control regulations determine the extent to which foreign buyers can borrow money locally to fund the purchase.
+
+                Non-resident purchaser who does not work in South Africa:
+
+                - Non-resident buyer will not be granted more than 50% of the purchase price to fund the purchase.
+
+                - The balance must be paid in cash and this may be cash generated in South Africa, or off-shore funding.
+
+                Non-resident purchaser who is on a temporary work permit in South Africa:
+
+                - May be granted more than 50% of the purchase price, but the loan amount will still depend on the bank's criteria.
+
+                - A condition of the loan will be that the buyer reduces the bond to less than 50% of the registered amount before they leave South Africa to go back abroad. Some institutions would possibly require a work permit of at least four years before they would consider a bond for more than 50% of the purchase price.
+
+                While there might be a short-term gain by paying the seller directly from an overseas account at a discounted price, you will not be able to take money back out of the country when selling.
+            </p>
+            <h4 style="color: #E69432">Cash purchase</h4>
+            <p>Money must come into the country via the Reserve Bank, after which a deal receipt showing the exchange rate is issued. While there might be a short-term gain by paying the seller directly from an overseas account at a discounted price, you will not be able to take money back out of the country when selling.
+
+                Money in a property transaction must go straight to an attorney or estate agent's trust account pertaining to the purchase of the property. This is so that there is proof that the money went towards the purchase of the property.
+
+                Non-residents who decide to sell their property in SA can repatriate all funds invested, plus any profit made on the sale, less Capital Gains Tax (CGT). Keeping detailed receipts of all improvements made to the property can be used to write off against any profit made when selling, resulting in paying a lower CGT amount.
+
+                The following documentation should be kept by the foreign purchaser to avoid any delays regarding the repatriation of funds from the sale of the property:
+
+                - Proof of the derivation of the purchasing funds, including statements on the foreign transferring account, as well as the receiving conveyancer's bank statements.
+
+                - A copy of the original sale agreement.
+
+                Upon the eventual sale of the property, application will be made for Exchange Control Approval for the repatriation of the funds, supported by the following documents in addition to the documents as set out above:
+
+                - Sale agreement (onward sale).
+
+                - Conveyancer’s final statement of account reflecting calculation of the sale proceeds.
+
+                - Foreign bank account information.
+
+                - ID and proof of residence of non-resident.
+
+                Tax implications as a non-resident
+
+                Non-residents who purchase property in South Africa are required to register as South African tax payers solely for the purposes of their CGT obligation.
+
+                Foreign buyers have to ensure that they have a South African tax number, and any entity buying or selling must also provide a South African tax number. This is not difficult to get, and is easily accessed through either the parties' attorney, tax consultant or online.
+
+                At the moment, the highest rate of CGT in South Africa for individuals is 18% of the capital profit.
+
+                There is a withholding tax, whereby when immovable property in South Africa is purchased by any person from a non-resident, that purchaser (through the conveyancing attorney) must withhold the required rate until clearance is received from the South African Revenue Service (SARS) from any amount to be paid to the seller or the seller's agent (tax directives for a lower rate or an exemption can be obtained for the withholding tax):
+
+                - 7.5% of the amount payable where the seller is a natural person;
+
+                - 10% of the amount payable where the seller is a company; or
+
+                - 15% of the amount payable where the seller is a trust.
+
+                The above only pertains to properties that sold for more than R2 million. The full proceeds of sale, (less any CGT obligation), can be taken out of the country.
+            </p>
+            <h4 style="color: #E69432">The process</h4>
+            <p>Sign the offer > Transfer attorneys receive contract > Bond approval > Receive guarantees from bond attorney > Fees and deposits paid > Documents signed > Transfer documents sent to deeds office > Transaction is lodged at deeds office > Property registered in new owners name > Seller vacates property > Buyer takes occupation > Pay out of any funds needed and close file.
+
+                Hutchison says it is important to contact a reputable real estate agency, whether it be to either sell your property to foreign investors, if you yourself are considering investing in SA as an overseas visitor, or even if you wish to advise friends and family visiting from abroad on what they would need.
+
+                “We have an international network of shops in over 35 countries, and our sales advisors are trained on international standards, ensuring that only the best advice and step-by-step support is given to all our clients,” says Hutchison.
+            </p>
+
+            </p>
+
+
+        </div>
+
+        <div class="forsale-grids1">
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s4.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>60 Merrick Way, Miami</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$ 2,500 </h6>
+            </div>
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s5.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>Florida 5, Pinecrest, FL</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$ 4,500 </h6>
+            </div>
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s6.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>109 Bollywood Boulevard</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$ 9,500 </h6>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="forsale-grids1">
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s7.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>60 Merrick Way, Miami</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$ 2,500 </h6>
+            </div>
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s2.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>Florida 5, Pinecrest, FL</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$ 5,500 </h6>
+            </div>
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s3.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>109 Bollywood Boulevard</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$ 7,500 </h6>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="forsale-grids1">
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s3.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>60 Merrick Way, Miami</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$ 3,500 </h6>
+            </div>
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s4.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>Florida 5, Pinecrest, FL</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$ 4,500 </h6>
+            </div>
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s7.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>109 Bollywood Boulevard</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$9,500 </h6>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="forsale-grids1">
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s3.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>60 Merrick Way, Miami</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$ 2,500 </h6>
+            </div>
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s5.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>Florida 5, Pinecrest, FL</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$4,500 </h6>
+            </div>
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s6.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>109 Bollywood Boulevard</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$ 7,500 </h6>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="forsale-grids1">
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s1.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>60 Merrick Way, Miami</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$ 4,500 </h6>
+            </div>
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s2.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>Florida 5, Pinecrest, FL</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$ 6,500 </h6>
+            </div>
+            <div class="col-md-4 forsale-grid1">
+                <img src="images/s3.jpg" class="img-responsive" alt="/">
+                <div class="sale-info">
+                    <span>For Sale</span>
+                </div>
+                <h5>109 Bollywood Boulevard</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer  elit,… <a href="#">Know More</a></p>
+                <h6>$ 9,500 </h6>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+
+
+
+
 
     </div>
+
+
+
+
 
     <div class="friend-agent">
         <div class="container">
