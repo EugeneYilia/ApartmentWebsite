@@ -71,7 +71,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         function submit1() {
             axios({
-                url: "http://eugeneliu.top/search/room",
+                url: "http://eugeneliu.top/user/login",
                 method: "post",
                 headers: {
                     'Content-Type': 'application/json'
@@ -81,15 +81,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     password: document.getElementById("password").options[document.getElementById("password").selectedIndex].value,
                 }
             }).then(function (response) {
+                console.log(response);
+                alert("login successfully!");
             }).catch
             (function (error) {
                 console.log(error);
-            });
+            })
         };
 
         function submit2() {//register
             axios({
-                url: "http://eugeneliu.top/search/room",
+                url: "http://eugeneliu.top/user/register",
                 method: "post",
                 headers: {
                     'Content-Type': 'application/json'
@@ -99,13 +101,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     password: document.getElementById("password2").options[document.getElementById("password2").selectedIndex].value,
                 }
             }).then(function (response) {
+                console.log(response);
                 alert("register successfully!");
             }).catch
             (function (error) {
                 console.log(error);
-            });
+            })
         };
-
 
         function submitForm() {
             //console.log(123);
