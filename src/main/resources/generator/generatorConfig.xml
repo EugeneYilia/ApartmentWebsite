@@ -19,8 +19,8 @@
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://127.0.0.1/apartment?useUnicode=true&amp;characterEncoding=utf-8"
                         userId="root" password="liuyichen"/>
-
-        <!--这个元素的配置来指定JDBC类型和Java类型如何转换
+        <!--
+        这个元素的配置来指定JDBC类型和Java类型如何转换
         可以配置的属性为forceBigDecimals，该属性可以控制是否强制DECIMAL和NUMERIC类型的字段转换为Java类型的java.math.BigDecimal,默认值为false，一般不需要配置。
         -->
         <!--
@@ -71,5 +71,6 @@
                enableDeleteByExample="false"
                enableSelectByExample="false"
                selectByExampleQueryId="false"/>
+
     </context>
 </generatorConfiguration>
