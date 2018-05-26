@@ -137,9 +137,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 //console.log(response.statusText);
                 //console.log(response.headers);
                 //console.log(response.config);
-
                 document.getElementById('apartmentContainer').innerHTML = "";
-
                 if (response.data.length === 0) {
                     document.getElementById('apartmentContainer').innerHTML += "<div style='color: #ac2925;font-size: 30px;'>There is no suitable apartment for you</div>";
                 }
@@ -148,10 +146,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 for (var i = 0; i < response.data.length; i++) {
                     document.getElementById('apartmentContainer').innerHTML += "<div class='operation-grids'>";
                     document.getElementById('apartmentContainer').innerHTML += "<div class='col-md-6 operation-grid'>";
-                    document.getElementById('apartmentContainer').innerHTML += "<div class='operation-left' style='width:200px;height:600px;'>" + "<img src=" + "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2492619745,1086876022&fm=27&gp=0.jpg" + "class='img-responsive'/>" + "</div>";
                     document.getElementById('apartmentContainer').innerHTML += "<div class='operation-right'>";
-
-
+                    document.getElementById('apartmentContainer').innerHTML += "<div class='operation-left' style='width:200px;height:600px;'>" +
+                        "<img src=" + (response.data)[i].imageurl +
+                        "class='img-responsive'/>" + "</div>";
+                    //"<img src=" + "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2492619745,1086876022&fm=27&gp=0.jpg" +
                     document.getElementById('apartmentContainer').innerHTML += "<p>bathroom:" + (response.data)[i].bathroom + "</p>";
                     document.getElementById('apartmentContainer').innerHTML += "<p>bed:" + (response.data)[i].bed + "</p>";
                     document.getElementById('apartmentContainer').innerHTML += "<p>continent:" + (response.data)[i].continent + "</p>";
@@ -161,19 +160,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     document.getElementById('apartmentContainer').innerHTML += "<p>status:" + (response.data)[i].status + "</p>";
                     document.getElementById('apartmentContainer').innerHTML += "<p>type:" + (response.data)[i].type + "</p>";
                     //document.getElementById('apartmentContainer').innerHTML += "<img src="+(response.data)[i].imageurl+"></img>";
-
                     //https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2492619745,1086876022&fm=27&gp=0.jpg
                     document.getElementById('apartmentContainer').innerHTML += "</div>";
                     document.getElementById('apartmentContainer').innerHTML += "</div>";
-
                     document.getElementById('apartmentContainer').innerHTML += "</div>";
                 }
-
 
             }).catch(function (error) {
                 console.log(error);
             });
-
 
             if (document.form1.country.value === "Ghana") {
                 document.getElementById("Ghanaflag").style.display = "";
@@ -3257,17 +3252,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4 friend-grid">
                     <img src="images/p.png">
                     <h4>Search From Anywhere</h4>
-                    <p>We provide you the best real estate deals from selected locations across each continent with high quality standard of living,stable political environment, and great business opportunities. .</p>
+                    <p>We provide you the best real estate deals from selected locations across each continent with high
+                        quality standard of living,stable political environment, and great business opportunities. .</p>
                 </div>
                 <div class="col-md-4 friend-grid">
                     <img src="images/p1.png">
                     <h4>Friendly Agents</h4>
-                    <p>It may sound harsh, but agents are not friendly or unfriendly towards you because they need a new pal. By statute, agents owe every client the same fiduciary responsibilities. These responsibilities are confidentiality, loyalty, obedience, disclosure, care, and accounting. </p>
+                    <p>It may sound harsh, but agents are not friendly or unfriendly towards you because they need a new
+                        pal. By statute, agents owe every client the same fiduciary responsibilities. These
+                        responsibilities are confidentiality, loyalty, obedience, disclosure, care, and accounting. </p>
                 </div>
                 <div class="col-md-4 friend-grid">
                     <img src="images/p2.png">
                     <h4>Buy or Rent</h4>
-                    <p>When deciding if buying or renting a home it’s a better option we often look at the costs involved for both a Homeowner and a Tenant. The choice to buy or rent depends largely on your personal profile and the current conditions of the property market . </p>
+                    <p>When deciding if buying or renting a home it’s a better option we often look at the costs
+                        involved for both a Homeowner and a Tenant. The choice to buy or rent depends largely on your
+                        personal profile and the current conditions of the property market . </p>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -3279,10 +3279,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="offer-grids">
                 <div class="col-md-6 offer-grid">
                     <div class="offer-grid1">
-                        <h4><a >Townhouse in Nashville, Tennessee, USA </a></h4>
+                        <h4><a>Townhouse in Nashville, Tennessee, USA </a></h4>
                         <div class="offer1">
                             <div class="offer-left">
-                                <a  class="mask"><img src="images/p3.jpg" class="img-responsive zoom-img" alt=""/></a>
+                                <a class="mask"><img src="images/p3.jpg" class="img-responsive zoom-img" alt=""/></a>
                             </div>
                             <div class="offer-right">
 
@@ -3302,8 +3302,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </a></h4>
                         <div class="offer1">
                             <div class="offer-left">
-                                <a  class="mask"><img src="images/p4.jpg"
-                                                                        class="img-responsive zoom-img" alt=""/></a>
+                                <a class="mask"><img src="images/p4.jpg"
+                                                     class="img-responsive zoom-img" alt=""/></a>
                             </div>
                             <div class="offer-right">
                                 <h5>(For Sale)</h5>
@@ -3327,12 +3327,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="offer1">
                             <div class="offer-left">
                                 <a class="mask"><img src="images/p5.jpg"
-                                                                        class="img-responsive zoom-img" alt=""/></a>
+                                                     class="img-responsive zoom-img" alt=""/></a>
                             </div>
                             <div class="offer-right">
                                 <h5>(For Sale)</h5>
                                 <p style="font-weight: bold;font-size:20px;margin-left:-6%;">5 bedrooms 3 bath</p>
-                                <p style="font-size: 30px; color: #E69432; margin-left:-6%;margin-top:-8%;"> $248,895</p>
+                                <p style="font-size: 30px; color: #E69432; margin-left:-6%;margin-top:-8%;">
+                                    $248,895</p>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -3344,7 +3345,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="offer1">
                             <div class="offer-left">
                                 <a class="mask"><img src="images/p6.jpg"
-                                                                        class="img-responsive zoom-img" alt=""/></a>
+                                                     class="img-responsive zoom-img" alt=""/></a>
                             </div>
                             <div class="offer-right">
 
@@ -3365,19 +3366,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="offer-grid1">
                         <h4><a href="#">Apartment in Thailand
                             491 Rangsit-Nakhon Nayok 4 Road,
-                            Prachathipat  Amphoe Tanyaburi,
+                            Prachathipat Amphoe Tanyaburi,
                             Pathumthani 12130
 
                         </a></h4>
                         <div class="offer1">
                             <div class="offer-left">
                                 <a class="mask"><img src="images/p7.jpg"
-                                                                        class="img-responsive zoom-img" alt=""/></a>
+                                                     class="img-responsive zoom-img" alt=""/></a>
                             </div>
                             <div class="offer-right">
                                 <h5>(For Rent)</h5>
                                 <p style="font-weight: bold;font-size:20px;margin-left:-6%;">5 bedrooms 3 bath</p>
-                                <p style="font-size: 30px; color: #E69432; margin-left:-6%;margin-top:-8%;">  $1000</p>
+                                <p style="font-size: 30px; color: #E69432; margin-left:-6%;margin-top:-8%;"> $1000</p>
 
                             </div>
                             <div class="clearfix"></div>
@@ -3392,13 +3393,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             72150</a></h4>
                         <div class="offer1">
                             <div class="offer-left">
-                                <a  class="mask"><img src="images/p8.jpg"
-                                                                        class="img-responsive zoom-img" alt=""/></a>
+                                <a class="mask"><img src="images/p8.jpg"
+                                                     class="img-responsive zoom-img" alt=""/></a>
                             </div>
                             <div class="offer-right">
                                 <h5>(For Sale)</h5>
                                 <p style="font-weight: bold;font-size:20px;margin-left:-6%;">5 bedrooms 3 bath</p>
-                                <p style="font-size: 30px; color: #E69432; margin-left:-6%;margin-top:-8%;">  $248,895 </p>
+                                <p style="font-size: 30px; color: #E69432; margin-left:-6%;margin-top:-8%;">
+                                    $248,895 </p>
 
 
                             </div>
@@ -3515,7 +3517,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <img src="images/t1.png" class="img-responsive" alt=""/>
                     </div>
                     <div class="col-md-10 testmonial-text">
-                        <p>“ We made the absolute right choice in selecting Baoyunju International Real Estate and Construction to sell our Loch Lea home! Their personal attention, professionalism, and communication of what buyers expect in our price range were keys in getting our home sold quickly. This has been the best real estate experience we have ever had! "</p>
+                        <p>“ We made the absolute right choice in selecting Baoyunju International Real Estate and
+                            Construction to sell our Loch Lea home! Their personal attention, professionalism, and
+                            communication of what buyers expect in our price range were keys in getting our home sold
+                            quickly. This has been the best real estate experience we have ever had! "</p>
                         <h4><a href="#">Andrew Kasunde </a></h4>
                     </div>
                     <div class="clearfix"></div>
@@ -3525,7 +3530,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <img src="images/t2.png" class="img-responsive" alt=""/>
                     </div>
                     <div class="col-md-10 testmonial-text">
-                        <p>“ Baoyunju International Real Estate and Construction worked with me through the purchase of a new home and sale of my existing home. They quickly learned what I wanted and found it for me in a few days. They directed me in what I needed to do to sell my existing home and it sold very quickly for very close to my asking price when we listed it ”.</p>
+                        <p>“ Baoyunju International Real Estate and Construction worked with me through the purchase of
+                            a new home and sale of my existing home. They quickly learned what I wanted and found it for
+                            me in a few days. They directed me in what I needed to do to sell my existing home and it
+                            sold very quickly for very close to my asking price when we listed it ”.</p>
                         <h4><a href="#">Song Jie </a></h4>
                     </div>
                     <div class="clearfix"></div>
@@ -3535,7 +3543,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <img src="images/t3.png" class="img-responsive" alt=""/>
                     </div>
                     <div class="col-md-10 testmonial-text">
-                        <p>“ If you are looking for a real estate agent Baoyunju International Real Estate and Construction is the company for you. They sold my house in four days getting more than we asked.They are extremely professional, personable, and detailed oriented. They staged my home to sell using a dynamic team consisting of not just them but a professional stagers and photographers as well. Their sales results speak for themself. You won't be disappointed ”
+                        <p>“ If you are looking for a real estate agent Baoyunju International Real Estate and
+                            Construction is the company for you. They sold my house in four days getting more than we
+                            asked.They are extremely professional, personable, and detailed oriented. They staged my
+                            home to sell using a dynamic team consisting of not just them but a professional stagers and
+                            photographers as well. Their sales results speak for themself. You won't be disappointed ”
                         </p>
                         <h4><a href="#">Rosemary </a></h4>
                     </div>
