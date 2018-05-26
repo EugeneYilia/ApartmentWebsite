@@ -76,8 +76,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     'Content-Type': 'application/json'
                 },
                 data: {
-                    email: document.getElementById("email1").options[document.getElementById("email1").selectedIndex].value,
-                    password: document.getElementById("password1").options[document.getElementById("password1").selectedIndex].value,
+                    email: document.getElementById("email1").value,
+                    password: document.getElementById("password1").value
                 }
             }).then(function (response) {
                 console.log(response);
@@ -96,8 +96,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     'Content-Type': 'application/json'
                 },
                 data: {
-                    email: document.getElementById("email2").options[document.getElementById("email2").selectedIndex].value,
-                    password: document.getElementById("password2").options[document.getElementById("password2").selectedIndex].value,
+                    email: document.getElementById("email2").value,
+                    password: document.getElementById("password2").value
                 }
             }).then(function (response) {
                 console.log(response);
