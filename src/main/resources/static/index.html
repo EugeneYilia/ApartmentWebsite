@@ -68,7 +68,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="js/EugeneLiu.js"></script>
 
     <script>
-
         function submit1() {
             axios({
                 url: "http://eugeneliu.top/user/login",
@@ -77,8 +76,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     'Content-Type': 'application/json'
                 },
                 data: {
-                    email: document.getElementById("email").options[document.getElementById("email").selectedIndex].value,
-                    password: document.getElementById("password").options[document.getElementById("password").selectedIndex].value,
+                    email: document.getElementById("email1").options[document.getElementById("email1").selectedIndex].value,
+                    password: document.getElementById("password1").options[document.getElementById("password1").selectedIndex].value,
                 }
             }).then(function (response) {
                 console.log(response);
@@ -3578,24 +3577,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="modal-body real-spa">
                 <div class="login-grids">
                     <div class="login">
-
                         <div class="login-right">
-                            <form>
-                                <h3>Login</h3>
-                                <input type="text" id="email" value="Enter your Email" onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'Enter your Email';}" required="">
-                                <input type="password" id="password" value="Password" onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'Password';}" required="">
-
-                                <div class="single-bottom">
-                                    <input type="checkbox" id="brand" value="">
-                                    <label for="brand"><span></span>Remember Me.</label>
-                                </div>
-                                <button style="width: 100%;height: 45px;margin-top: 5%; " onclick="submit1()">Login
-                                </button>
-                            </form>
+                            <h3>Login</h3>
+                            <input type="text" id="email1" value="Enter your Email" onfocus="this.value = '';"
+                                   onblur="if (this.value == '') {this.value = 'Enter your Email';}" required="">
+                            <input type="password" id="password1" value="Password" onfocus="this.value = '';"
+                                   onblur="if (this.value == '') {this.value = 'Password';}" required="">
+                            <div class="single-bottom">
+                                <input type="checkbox" id="brand" value="">
+                                <label for="brand"><span></span>Remember Me.</label>
+                            </div>
+                            <button style="width: 100%;height: 45px;margin-top: 5%; " onclick="submit1()">Login
+                            </button>
                         </div>
-
                     </div>
                     <p>By logging in you agree to our <a href="#">Terms</a> and <a href="#">Conditions</a> and <a
                             href="#">Privacy Policy</a></p>
@@ -3604,43 +3598,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
-<!-- //login -->
-
-<!--administrator-->
-
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content modal-info">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body real-spa">
-                <div class="login-grids">
-                    <div class="login">
-
-                        <div class="login-right">
-                            <form>
-                                <h3>administrator</h3>
-                                <input type="text" id="email" value="Enter the title" onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'Enter the title';}" required="">
-                                <input type="text" id="email" value="Enter the content" onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'Enter the content';}" required="">
-
-                                <button style="width: 100%;height: 45px;margin-top: 5%; " onclick="submit3()">
-                                    determine
-                                </button>
-                            </form>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+<!-- login -->
 
 <!-- Register -->
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
@@ -3654,16 +3612,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="login-grids">
                     <div class="login">
                         <div class="login-right">
-                            <form>
-                                <h3>Register </h3>
-                                <input type="text" value="Email id" id='email2' onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'Email id';}" required="">
-                                <input type="password" value="Password" id='password2' onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'Password';}" required="">
-
-                                <button style="width: 100%;height: 45px;margin-top: 5%; " onclick="submit2()">Register
-                                </button>
-                            </form>
+                            <h3>Register </h3>
+                            <input type="text" value="Email id" id='email2' onfocus="this.value = '';"
+                                   onblur="if (this.value == '') {this.value = 'Email id';}" required="">
+                            <input type="password" value="Password" id='password2' onfocus="this.value = '';"
+                                   onblur="if (this.value == '') {this.value = 'Password';}" required="">
+                            <button style="width: 100%;height: 45px;margin-top: 5%; " onclick="submit2()">Register
+                            </button>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -3673,6 +3628,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
-<!-- //Register -->
+<!-- Register -->
+
+
+<!--administrator-->
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-info">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body real-spa">
+                <div class="login-grids">
+                    <div class="login">
+                        <div class="login-right">
+                            <form>
+                                <h3>administrator</h3>
+                                <input type="text" id="title1" value="Enter the title" onfocus="this.value = '';"
+                                       onblur="if (this.value == '') {this.value = 'Enter the title';}" required="">
+                                <input type="text" id="content1" value="Enter the content" onfocus="this.value = '';"
+                                       onblur="if (this.value == '') {this.value = 'Enter the content';}" required="">
+                                <button style="width: 100%;height: 45px;margin-top: 5%; " onclick="submit3()">
+                                    determine
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>>
