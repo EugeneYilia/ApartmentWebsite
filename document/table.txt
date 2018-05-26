@@ -17,8 +17,8 @@ type varchar(50),
 bed int(10),
 bathroom int(10),
 price int(10),
-imageURL varchar(100))default charset=utf8;
-//primary key(`continent`,`country`,`status`,`location`,`type`,`bed`,`bathroom`,`price`,`imageURL`)
+imageURL varchar(100),
+primary key(continent,country,status,location,type,bed,bathroom,price,imageURL))default charset=utf8;
 
 create table user(
 email varchar(50),
