@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Home</title>
+
     <!--css-->
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
     <link href="css/style.css" rel='stylesheet' type='text/css'/>
@@ -13,7 +13,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script type="application/x-javascript"> addEventListener("load", function () {
         setTimeout(hideURLbar, 0);
     }, false);
-
     function hideURLbar() {
         window.scrollTo(0, 1);
     } </script>
@@ -65,7 +64,49 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     </script>
     <script src="js/EugeneLiu.js"></script>
+
     <script>
+
+        function submit1(){
+
+            axios({
+                url: "http://eugeneliu.top/search/room",
+                method: "post",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: {
+                    email: document.getElementById("email").options[document.getElementById("email").selectedIndex].value,
+                    password: document.getElementById("password").options[document.getElementById("password").selectedIndex].value,
+
+                }
+            }).then(function (response) {
+
+            })catch(function (error) {
+                console.log(error);
+            });
+        };
+        function submit2(){
+
+            axios({
+                url: "http://eugeneliu.top/search/room",
+                method: "post",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: {
+                    name:document.getElementById("name").options[document.getElementById("name").selectedIndex].value,
+                    number:document.getElementById("number").options[document.getElementById("number").selectedIndex].value,
+                    email: document.getElementById("email").options[document.getElementById("email").selectedIndex].value,
+                    password: document.getElementById("password").options[document.getElementById("password").selectedIndex].value,
+
+                }
+            }).then(function (response) {
+                alert(register successfully!);
+            })catch(function (error) {
+                console.log(error);
+            });
+        };
         function submitForm() {
             //console.log(123);
             axios({
@@ -91,21 +132,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 //console.log(response.statusText);
                 //console.log(response.headers);
                 //console.log(response.config);
-
                 document.getElementById('apartmentContainer').innerHTML = "";
-
                 if (response.data.length === 0) {
                     document.getElementById('apartmentContainer').innerHTML += "<div style='color: #ac2925;font-size: 30px;'>There is no suitable apartment for you</div>";
                 }
-
                 //show on page start
                 for (var i = 0; i < response.data.length; i++) {
                     document.getElementById('apartmentContainer').innerHTML += "<div class='operation-grids'>";
                     document.getElementById('apartmentContainer').innerHTML += "<div class='col-md-6 operation-grid'>";
                     document.getElementById('apartmentContainer').innerHTML += "<div class='operation-left' style='width:200px;height:600px;'>" + "<img src=" + "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2492619745,1086876022&fm=27&gp=0.jpg" + "class='img-responsive'/>" + "</div>";
                     document.getElementById('apartmentContainer').innerHTML += "<div class='operation-right'>";
-
-
                     document.getElementById('apartmentContainer').innerHTML += "<p>bathroom:" + (response.data)[i].bathroom + "</p>";
                     document.getElementById('apartmentContainer').innerHTML += "<p>bed:" + (response.data)[i].bed + "</p>";
                     document.getElementById('apartmentContainer').innerHTML += "<p>continent:" + (response.data)[i].continent + "</p>";
@@ -115,20 +151,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     document.getElementById('apartmentContainer').innerHTML += "<p>status:" + (response.data)[i].status + "</p>";
                     document.getElementById('apartmentContainer').innerHTML += "<p>type:" + (response.data)[i].type + "</p>";
                     //document.getElementById('apartmentContainer').innerHTML += "<img src="+(response.data)[i].imageurl+"></img>";
-
                     //https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2492619745,1086876022&fm=27&gp=0.jpg
                     document.getElementById('apartmentContainer').innerHTML += "</div>";
                     document.getElementById('apartmentContainer').innerHTML += "</div>";
-
                     document.getElementById('apartmentContainer').innerHTML += "</div>";
                 }
-
-
             }).catch(function (error) {
                 console.log(error);
             });
-
-
             if (document.form1.country.value === "Ghana") {
                 document.getElementById("Ghanaflag").style.display = "";
                 document.getElementById("Ethiopiaflag").style.display = "none";
@@ -213,7 +243,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 document.getElementById("Venezuelaflag").style.display = "none";
                 document.getElementById("Dubaiflag").style.display = "none";
                 document.getElementById("Qatarflag").style.display = "none";
-
             } else if (document.form1.country.value === "papua new guinea") {
                 document.getElementById("Ghanaflag").style.display = "none";
                 document.getElementById("Ethiopiaflag").style.display = "none";
@@ -235,7 +264,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 document.getElementById("Venezuelaflag").style.display = "none";
                 document.getElementById("Dubaiflag").style.display = "none";
                 document.getElementById("Qatarflag").style.display = "none";
-
             } else if (document.form1.country.value === "China") {
                 document.getElementById("Ghanaflag").style.display = "none";
                 document.getElementById("Ethiopiaflag").style.display = "none";
@@ -257,7 +285,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 document.getElementById("Venezuelaflag").style.display = "none";
                 document.getElementById("Dubaiflag").style.display = "none";
                 document.getElementById("Qatarflag").style.display = "none";
-
             } else if (document.form1.country.value === "Thailand") {
                 document.getElementById("Ghanaflag").style.display = "none";
                 document.getElementById("Ethiopiaflag").style.display = "none";
@@ -279,7 +306,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 document.getElementById("Venezuelaflag").style.display = "none";
                 document.getElementById("Dubaiflag").style.display = "none";
                 document.getElementById("Qatarflag").style.display = "none";
-
             } else if (document.form1.country.value === "South Korea") {
                 document.getElementById("Ghanaflag").style.display = "none";
                 document.getElementById("Ethiopiaflag").style.display = "none";
@@ -554,15 +580,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 document.getElementById("Dubaiflag").style.display = "none";
                 document.getElementById("Qatarflag").style.display = "";
             }
-
-
         }
     </script>
 </head>
-<body>
+<body id="translation">
 
 
-<div class="header-section">
+<div  class="header-section">
     <div class="container">
         <div class="head-top">
             <div class="social-icon">
@@ -575,12 +599,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="email">
                 <ul>
                     <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email: <a
-                            href="mailto:liuyichen@eugeneliu.xyz">liuyichen@eugeneliu.xyz</a></li>
+                            href="mailto:liuyichen@eugeneliu.xyz">@</a></li>
                     <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="#" data-toggle="modal"
-                                                                                        data-target="#myModal">Login</a>
+                                                                                        data-target="#myModal2">Login</a>
                     </li>
                     <li><i class="glyphicon glyphicon-lock" aria-hidden="true"></i><a href="#" data-toggle="modal"
                                                                                       data-target="#myModal1">Register</a>
+                    </li>
+                    <li>
+                        <i class="glyphicon "  aria-hidden="true"></i>
+
+                        <a href="">Translation</a>
                     </li>
                 </ul>
             </div>
@@ -615,7 +644,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <ul class="dropdown-menu">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="aboutus.html">About us</a></li>
-                            <li><a href="Media.html">Media</a></li>
+
                             <li><a href="News.html">News</a></li>
                             <li><a href="services.html">Service</a></li>
                         </ul>
@@ -636,11 +665,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">Construction<span class="caret"></span></a>
+                           aria-expanded="false">Gallery<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="">2 </a></li>
-                            <li><a href="">3 </a></li>
-                            <li><a href="">4 </a></li>
+                            <li><a href="2columnsgallery.html">Phase one</a></li>
+                            <li><a href="3columnsgallery.html">Phase two</a></li>
+                            <li><a href="4columnsgallery.html">Phase three</a></li>
                         </ul>
                     </li>
                     <li><a href="blog.html">Blog</a></li>
@@ -665,7 +694,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h3>1400 Anastasia Avenue</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec pellentesque ex. Morbi iaculis
                         mi in varius auctor. Nullam feugiat erat .</p>
-                    <a href="#" class="button">know more</a>
+
                 </div>
             </div>
             <div class="slid banner2">
@@ -673,7 +702,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h3>Oakland, NJ94605</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec pellentesque ex. Morbi iaculis
                         mi in varius auctor. Nullam feugiat erat .</p>
-                    <a href="#" class="button">know more</a>
+
                 </div>
             </div>
             <div class="slid banner3">
@@ -681,7 +710,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h3>Florida 5, Pinecrest, FL</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec pellentesque ex. Morbi iaculis
                         mi in varius auctor. Nullam feugiat erat .</p>
-                    <a href="#" class="button">know more</a>
+
                 </div>
             </div>
         </ul>
@@ -3534,16 +3563,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="login-right">
                             <form>
                                 <h3>Login</h3>
-                                <input type="text" value="Enter your Email" onfocus="this.value = '';"
+                                <input type="text" id="email" value="Enter your Email" onfocus="this.value = '';"
                                        onblur="if (this.value == '') {this.value = 'Enter your Email';}" required="">
-                                <input type="password" value="Password" onfocus="this.value = '';"
+                                <input type="password" id="password" value="Password" onfocus="this.value = '';"
                                        onblur="if (this.value == '') {this.value = 'Password';}" required="">
-                                <h4><a href="#">Forgot password</a> / <a href="#">Create new password</a></h4>
+
                                 <div class="single-bottom">
                                     <input type="checkbox" id="brand" value="">
                                     <label for="brand"><span></span>Remember Me.</label>
                                 </div>
-                                <input type="submit" value="Login Now">
+                                <button style="width: 100%;height: 45px;margin-top: 5%; "onclick="submit1()">Login</button>
                             </form>
                         </div>
 
@@ -3556,6 +3585,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </div>
 <!-- //login -->
+
+<!--administrator-->
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-info">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body real-spa">
+                <div class="login-grids">
+                    <div class="login">
+
+                        <div class="login-right">
+                            <form>
+                                <h3>administrator</h3>
+                                <input type="text" id="email" value="Enter the title" onfocus="this.value = '';"
+                                       onblur="if (this.value == '') {this.value = 'Enter the title';}" required="">
+                                <input type="text" id="email" value="Enter the content" onfocus="this.value = '';"
+                                       onblur="if (this.value == '') {this.value = 'Enter the content';}" required="">
+
+                                <button style="width: 100%;height: 45px;margin-top: 5%; "onclick="submit3()">determine</button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 
 
 <!-- Register -->
@@ -3572,22 +3638,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="login-right">
                             <form>
                                 <h3>Register </h3>
-                                <input type="text" value="Name" onfocus="this.value = '';"
+                                <input type="text" value="Name" id="name" onfocus="this.value = '';"
                                        onblur="if (this.value == '') {this.value = 'Name';}" required="">
-                                <input type="text" value="Mobile number" onfocus="this.value = '';"
+                                <input type="text" value="Mobile number" id="number" onfocus="this.value = '';"
                                        onblur="if (this.value == '') {this.value = 'Mobile number';}" required="">
-                                <input type="text" value="Email id" onfocus="this.value = '';"
+                                <input type="text" value="Email id" id="email" onfocus="this.value = '';"
                                        onblur="if (this.value == '') {this.value = 'Email id';}" required="">
-                                <input type="password" value="Password" onfocus="this.value = '';"
+                                <input type="password" value="Password" id="password" onfocus="this.value = '';"
                                        onblur="if (this.value == '') {this.value = 'Password';}" required="">
 
-                                <input type="submit" value="Register Now">
+                                <button style="width: 100%;height: 45px;margin-top: 5%; "onclick="submit2()">Register</button>
                             </form>
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                    <p>By logging in you agree to our <a href="#">Terms</a> and <a href="#">Conditions</a> and <a
-                            href="#">Privacy Policy</a></p>
+                    <p>By logging in you agree to our <a href="#">Terms</a> and <a href="#">Conditions</a> </p>
                 </div>
             </div>
         </div>
