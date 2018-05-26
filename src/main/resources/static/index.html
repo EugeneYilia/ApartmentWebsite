@@ -100,7 +100,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     password: document.getElementById("password2").value
                 }
             }).then(function (response) {
-                console.log(response);
+                console.log(response.data);
+                console.log(response.data.email);
+                document.getElementById("accountEmail").value = response.date.email;
                 alert("register successfully!");
             }).catch
             (function (error) {
@@ -602,7 +604,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
 </head>
 <body id="translation">
-
+<div><input id="accountEmail"/></div>
 
 <div class="header-section">
     <div class="container">
@@ -617,7 +619,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="email">
                 <ul>
                     <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email: <a
-                            href="mailto:liuyichen@eugeneliu.xyz">@</a></li>
+                            href="mailto:liuyichen@eugeneliu.xyz">liuyichen@eugeneliu.xyz</a></li>
                     <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="#" data-toggle="modal"
                                                                                         data-target="#myModal">Login</a>
                     </li>
@@ -3557,7 +3559,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <p>Freephone : +1 234 567 890</p>
                 <p>Telephone : +1 234 567 890</p>
                 <p>FAX : + 1 234 567 890</p>
-                <p>E-mail : <a href="mailto:example@mail.com"> example@mail.com</a></p>
+                <p>E-mail : <a href="mailto:liuyichen@eugeneliu.xyz">liuyichen@eugeneliu.xyz</a></p>
             </div>
             <div class="clearfix"></div>
         </div>
