@@ -2365,7 +2365,7 @@ a.button2 {
     width: 255px;
     display: block;
     position: absolute;
-    z-index: -9999px;
+    z-index: 0;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -ms-transition: all 0.3s ease-out;
