@@ -26,3 +26,7 @@ password varchar(50),
 primary key(email)
 )default charset=utf8;
 
+create table donator(
+
+)default charset=utf8;
+
