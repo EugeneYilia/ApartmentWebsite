@@ -5,6 +5,9 @@ body{
     -o-transition:0.5s all;
     -ms-transition:0.5s all;
 }
+.buttona:hover{
+    background-color: #d58512;
+}
 input[type="button"]{
     transition:0.5s all;
     -webkit-transition:0.5s all;
@@ -924,7 +927,7 @@ a.button3 {
     cursor: default;
     background-color: #2da9e1;
     border: 1px solid #2da9e1;
-    border-bottom-color: none!important;
+    border-bottom-color: none !important;
 }
 .nav-tabs {
     border-bottom: none!important;
@@ -3699,6 +3702,9 @@ p.privacy-para {
         .agent-left {
             width: 100%;
         }
+
+
+    }}
         .agent-right {
             width: 100%;
         }
