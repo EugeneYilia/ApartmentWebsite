@@ -9,11 +9,11 @@
     email, password
   </sql>
 
-    <select id="selectUser" resultMap="BaseResultMap" parameterType="java.lang.String">
+    <select id="selectUser" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
         from user
-        where email = #{email,jdbcType=VARCHAR} and password = #{password,jdbcType=VARCHAR}
+        where `email` = #{email} and `password` = #{password}
     </select>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
         select

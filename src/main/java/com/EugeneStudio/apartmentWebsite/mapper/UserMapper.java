@@ -1,6 +1,7 @@
 package com.EugeneStudio.apartmentWebsite.mapper;
 
 import com.EugeneStudio.apartmentWebsite.model.User;
+import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {
     int deleteByPrimaryKey(String email);
@@ -15,5 +16,5 @@ public interface UserMapper {
 
     int updateByPrimaryKey(User record);
 
-    User selectUser(String email,String password);
+    User selectUser(@Param("email") String email, @Param("password") String password);
 }
