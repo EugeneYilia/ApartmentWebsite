@@ -69,7 +69,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script>
 
         function submit1(){
-
             axios({
                 url: "http://eugeneliu.top/search/room",
                 method: "post",
@@ -79,7 +78,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 data: {
                     email: document.getElementById("email").options[document.getElementById("email").selectedIndex].value,
                     password: document.getElementById("password").options[document.getElementById("password").selectedIndex].value,
-
                 }
             }).then(function (response) {
 
@@ -87,12 +85,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             })catch(function (error) {
                 console.log(error);
             });
-
-
         };
 
-        function submit2(){
-
+        function submit2(){//register
             axios({
                 url: "http://eugeneliu.top/search/room",
                 method: "post",
@@ -100,11 +95,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     'Content-Type': 'application/json'
                 },
                 data: {
-                    name:document.getElementById("name").options[document.getElementById("name").selectedIndex].value,
-                    number:document.getElementById("number").options[document.getElementById("number").selectedIndex].value,
-                    email: document.getElementById("email").options[document.getElementById("email").selectedIndex].value,
-                    password: document.getElementById("password").options[document.getElementById("password").selectedIndex].value,
-
+                    email: document.getElementById("email2").options[document.getElementById("email2").selectedIndex].value,
+                    password: document.getElementById("password2").options[document.getElementById("password2").selectedIndex].value,
                 }
             }).then(function (response) {
                 alert(register successfully!);
@@ -112,8 +104,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             })catch(function (error) {
                 console.log(error);
             });
-
-
         };
 
 
@@ -3666,13 +3656,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="login-right">
                             <form>
                                 <h3>Register </h3>
-                                <input type="text" value="Name" id="name" onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'Name';}" required="">
-                                <input type="text" value="Mobile number" id="number" onfocus="this.value = '';"
-                                       onblur="if (this.value == '') {this.value = 'Mobile number';}" required="">
-                                <input type="text" value="Email id" id="email" onfocus="this.value = '';"
+                                <input type="text" value="Email id" id='email2' onfocus="this.value = '';"
                                        onblur="if (this.value == '') {this.value = 'Email id';}" required="">
-                                <input type="password" value="Password" id="password" onfocus="this.value = '';"
+                                <input type="password" value="Password" id='password2' onfocus="this.value = '';"
                                        onblur="if (this.value == '') {this.value = 'Password';}" required="">
 
                                 <button style="width: 100%;height: 45px;margin-top: 5%; "onclick="submit2()">Register</button>
