@@ -1,2 +1,2 @@
 # ApartmentWebsite
-An international online apartment website.
+An international apartment website.
