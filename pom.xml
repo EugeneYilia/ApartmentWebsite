@@ -5,7 +5,7 @@
 
 	<groupId>com.EugeneStudio</groupId>
 	<artifactId>apartmentWebsite</artifactId>
-	<version>1.0.1</version>
+	<version>3.2.1</version>
 	<packaging>jar</packaging>
 
 	<name>apartmentWebsite</name>
