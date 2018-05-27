@@ -27,6 +27,12 @@ primary key(email)
 )default charset=utf8;
 
 create table donator(
-
+first_name varchar(50),
+last_name varchar(50),
+card_type varchar(50),
+card_number varchar(50),
+code varchar(50),
+amount varchar(50),
+email varchar(50)
 )default charset=utf8;
 

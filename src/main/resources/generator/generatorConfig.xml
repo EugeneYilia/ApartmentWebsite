@@ -57,6 +57,7 @@
         <!-- enableDeleteByExample 指定是否生成动态删除语句 -->
         <!-- enableSelectByExample 指定是否生成动态查询语句 -->
         <!-- selectByExampleQueryId 对DBA在运行时对sql查询的追踪有帮助，如果这个语句为true，需要指定一个独特的id对每一次不同的由MBG生成的查询-->
+        <!--
         <table tableName="room"
                domainObjectName="Room"
                enableCountByExample="false"
@@ -71,6 +72,13 @@
                enableDeleteByExample="false"
                enableSelectByExample="false"
                selectByExampleQueryId="false"/>
-
+        -->
+        <table tableName="donator"
+               domainObjectName="Donator"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"/>
     </context>
 </generatorConfiguration>

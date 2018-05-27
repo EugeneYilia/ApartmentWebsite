@@ -47,6 +47,7 @@ spring:
         connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
     resources:
         static-locations: classpath:/static/
+
 mybatis:
   #映射文件所在的位置   mapper文件夹下的所有xml文件
   mapper-locations: classpath:mapping/*.xml
