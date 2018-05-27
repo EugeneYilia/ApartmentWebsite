@@ -22,13 +22,13 @@ public class DonatorController {
     @ResponseBody
     @RequestMapping(value = "/add", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
     public Object addDonator(@RequestBody Map<String, Object> requestMap) {
-        String firstName = requestMap.get("firstName").toString().trim();
-        String lastName = requestMap.get("lastName").toString().trim();
-        String cardType = requestMap.get("cardType").toString().trim();
-        String cardNumber = requestMap.get("cardNumber").toString().trim();
-        String code = requestMap.get("code").toString().trim();
-        String amount = requestMap.get("amount").toString().trim();
-        String email = requestMap.get("email").toString().trim();
+        String firstName = requestMap.get("FirstName").toString().trim();
+        String lastName = requestMap.get("LastName").toString().trim();
+        String cardType = requestMap.get("CardType").toString().trim();
+        String cardNumber = requestMap.get("CardNumber").toString().trim();
+        String code = requestMap.get("Code").toString().trim();
+        String amount = requestMap.get("Amount").toString().trim();
+        String email = requestMap.get("Email").toString().trim();
 
         Donator donator = new Donator();
         donator.setFirstName(firstName);
