@@ -25,29 +25,30 @@ public class SearchController {
     @RequestMapping(value = "/room", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
     public Object searchRoom(@RequestBody Map<String, Object> requestMap) {
         String continent = requestMap.get("continent").toString().trim();
-        System.out.println(continent);
+        //System.out.println(continent);
 
         String country = requestMap.get("country").toString().trim();
-        System.out.println(country);
+        //System.out.println(country);
 
         String status = requestMap.get("status").toString().trim();
-        System.out.println(status);
+        //System.out.println(status);
 
         String type = requestMap.get("type").toString().trim();
-        System.out.println(type);
+        //System.out.println(type);
 
         int bed = Integer.parseInt(requestMap.get("bed").toString().trim());
-        System.out.println(bed);
+        //System.out.println(bed);
 
         int bathroom = Integer.parseInt(requestMap.get("bathroom").toString().trim());
-        System.out.println(bathroom);
+        //System.out.println(bathroom);
 
         int minPrice = Integer.parseInt(requestMap.get("minPrice").toString().trim());
-        System.out.println(minPrice);
+        //System.out.println(minPrice);
 
         int maxPrice = Integer.parseInt(requestMap.get("maxPrice").toString().trim());
-        System.out.println(maxPrice);
+        //System.out.println(maxPrice);
 
+        /*
         List<RoomKey> roomKeyList = searchService.findRooms(continent, country, status, type, bed, bathroom, minPrice, maxPrice);
         System.out.println("#########################RoomKeyList START####################################");
         for (int i = 0; i < roomKeyList.size(); i++) {
@@ -57,6 +58,7 @@ public class SearchController {
             System.out.println();
         }
         System.out.println("#########################RoomKeyList END######################################");
+        */
         return searchService.findRooms(continent, country, status, type, bed, bathroom, minPrice, maxPrice);
     }
 }

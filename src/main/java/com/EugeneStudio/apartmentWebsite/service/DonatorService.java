@@ -1,5 +1,7 @@
 package com.EugeneStudio.apartmentWebsite.service;
 
+import com.EugeneStudio.apartmentWebsite.model.Donator;
+
 public interface DonatorService {
-    void recordDonator();
+    boolean recordDonator(Donator donator);
 }
