@@ -17,7 +17,7 @@ public class RoomKey {
 
     private Integer price;
 
-    private String imageurl;
+    private String imageURL;
 
     public String getContinent() {
         return continent;
@@ -84,10 +84,10 @@ public class RoomKey {
     }
 
     public String getImageurl() {
-        return imageurl;
+        return imageURL;
     }
 
-    public void setImageurl(String imageurl) {
-        this.imageurl = imageurl == null ? null : imageurl.trim();
+    public void setImageurl(String imageURL) {
+        this.imageURL = imageURL == null ? null : imageURL.trim();
     }
 }
