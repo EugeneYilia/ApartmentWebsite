@@ -72,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     CardNumber: document.getElementById("cardnumber").value,
                     Code: document.getElementById("password").value,
                     Amount: document.getElementById("DollarsAmount").value,
-                    Email: document.getElementById("email").value
+                    Email: document.getElementById("Donateemail").value
                 }
             }).then(function (response) {
                 //window.location.href='images/s7.jpg';
@@ -230,8 +230,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <img style="width: 30%;height: 50%;" src="images/mastercard.jpg">
                                                     <img style="width: 30%;height: 50%;" src="images/visa.jpg">
                                                     <img style="width: 30%;height: 50%; " src="images/union.jpg">
-
-
                                                 </div>
                                             </div>
 
@@ -263,11 +261,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                    style="border-radius: 8%;"
                                                    onfocus="this.value = '';"
                                                    onblur="if (this.value == '') {this.value = 'Email id';}"
-                                                   required="">
-
+                                                   required=""/>
                                         </div>
-
-
                                     </div>
                                     <div style="margin-top: 5%;">
                                         <input type="radio" name="radio" value="1" onclick="setSelectUserNo(this)">I
