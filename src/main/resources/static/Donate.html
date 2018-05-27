@@ -20,10 +20,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         window.scrollTo(0, 1);
     } </script>
 
-
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
-
 
     <!---fonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
@@ -48,30 +46,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
         function setSelectUserNo(radioObj) {
-
             var radioCheck = $(radioObj).val();
             if ("1" == radioCheck) {
                 $(radioObj).attr("checked", false);
                 $(radioObj).val("0");
                 document.getElementById("star").style.display = "none";
-
             } else {
                 $(radioObj).val("1");
                 document.getElementById("star").style.display = "";
-
             }
         };
 
     </script>
     <script type="text/javascript">
         function Donate() {
-
-
-
-
-
-            //window.navigate("blog.html"); 
-
+            //window.navigate("blog.html");
             axios({
                 url: "http://eugeneliu.top/donator/add",
                 method: "post",
@@ -93,17 +82,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             (function (error) {
                 console.log(error);
             });
-
-
         };
-
     </script>
-
-
 </head>
 <body>
-
-
 <div class="header-section">
     <div class="container">
         <div class="head-top">
