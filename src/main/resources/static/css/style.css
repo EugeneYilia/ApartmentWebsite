@@ -4888,3 +4888,30 @@ p.quote {
         font-size: 1.2em;
     }
 }
+
+.donate {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.cardlogo {
+    display: flex;
+    flex-direction: row;
+}
+
+.caption3 {
+    text-align: left;
+    width: 70%;
+    height: 700px;
+    opacity: 0.8;
+    margin: 1em 0em;
+    background: #afbbbf;
+
+    overflow: auto;
+    padding: .94em 2em;
+}
