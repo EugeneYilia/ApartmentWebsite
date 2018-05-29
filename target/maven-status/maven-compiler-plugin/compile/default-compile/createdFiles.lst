@@ -1,0 +1,7 @@
+com\EugeneStudio\apartmentWebsite\controller\DonatorController.class
+com\EugeneStudio\apartmentWebsite\service\DonatorService.class
+com\EugeneStudio\apartmentWebsite\configuration\ServerConfiguration.class
+com\EugeneStudio\apartmentWebsite\controller\BackDoorController.class
+com\EugeneStudio\apartmentWebsite\model\Donator.class
+com\EugeneStudio\apartmentWebsite\mapper\DonatorMapper.class
+com\EugeneStudio\apartmentWebsite\service\impl\DonatorServiceImpl.class
