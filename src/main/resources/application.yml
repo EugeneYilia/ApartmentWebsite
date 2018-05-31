@@ -1,6 +1,6 @@
 server:
   #监听的端口号
-  port: 80
+  port: 81
 
 spring:
     datasource:

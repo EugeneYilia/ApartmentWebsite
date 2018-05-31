@@ -4,5 +4,5 @@ public class ServerConfiguration {
     private ServerConfiguration() {
     }
 
-    public static final String DOMAIN_NAME = "eugeneliu.top";
+    public static final String DOMAIN_NAME = "eugeneliu.top:81";
 }
